@@ -17,35 +17,60 @@
             
         }
         section{
-            height: 300px;
+            
             margin-bottom: 5px;
-            display: flex;
-            gap: 5px;
-        }
-        .second-rows{
             display: flex;
             flex-flow: row nowrap;
             gap: 5px;
         }
+        .row{
+            height: 300px;
+        }
+        /* .second-rows{
+            display: flex;
+            flex-flow: row wrap;
+            gap: 5px;
+        } */
         .second-rows div{
-            width: calc(100%/3);
+            width: 100%;
         }
         .second-row-third-column>div{
             width:100%;
             padding-bottom: 5px;
             height: calc(50% - 5px/2);
         }
-        .third-row div{
-            width: calc(100%/3);
+
+
+        .third-row{
+            
+        }
+        .third-row>div{
+            width: 100%;
         }
         .third-row-second-column{
             display: flex;
-            flex-flow: row wrap;
+            flex-wrap: wrap;
             gap: 5px;
         }
         .third-row-second-column div{
             width: calc(50% - 5px/2);
             height: calc(50% - 5px/2);
+        }
+
+        @media screen and (max-width:576px) {
+            body{
+                color: red;
+            }
+            section{
+                margin-bottom: 5px;
+                display: flex;
+                flex-flow: row wrap;
+                gap: 5px;
+            }
+            .third-row-second-column div{
+                width: 100%;
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -54,11 +79,11 @@
     <h2>This is flower garden.</h2>
    </header>
 
-   <section>
+   <section class="row">
     <img src="flowers/fh.jpg" alt="">
    </section>
 
-   <section class="second-rows row">
+   <section class="second-rows">
     <div><img src="flowers/fa.jpg" alt=""></div>
     <div><img src="flowers/fb.jpg" alt=""></div>
     <div class="second-row-third-column">
@@ -67,7 +92,7 @@
     </div>
    </section>
 
-   <section class="row third-row">
+   <section class="third-row">
     <div><img src="flowers/fe.jpg" alt=""></div>
     <div class="third-row-second-column">
         <div><img src="flowers/ff.jpg" alt=""></div>
